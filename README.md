@@ -36,7 +36,9 @@ This is the output for most Z80 NMOS processors, including:
 ```
 E>z80type
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Processor Type: Z80 NMOS
+Processor family: Z80
+Logic family:     NMOS
+Manufacturer:     Zilog or non-MME/Thesys clone
 ```
 #### MME UB880D
 
@@ -47,7 +49,9 @@ This is the output for East German UB880 Z80 clones:
 ```
 E>z80type
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Processor Type: U880 NMOS
+Processor family: U880
+Logic family:     NMOS
+Manufacturer:     MME or Thesys
 ```
 #### Zilog Z84C00 - CMOS
 
@@ -55,7 +59,9 @@ This is the output for Zilog Z84C00 and reportedly ST Z84C00 (to be verified)
 ```
 E>z80type
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Processor Type: Z80 CMOS Zilog or SGS/ST
+Processor family: Z80
+Logic family:     CMOS
+Manufacturer:     Zilog or SGS/ST
 ```
 #### NEC and Toshiba CMOS Z80 clones
 
@@ -65,5 +71,7 @@ This is the output for NEC and Toshiba Z80 CMOS clones:
 ```
 E>z80type
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Processor Type: Z80 CMOS NEC or Toshiba
+Processor family: Z80
+Logic family:     CMOS
+Manufacturer:     Toshiba or NEC
 ```
