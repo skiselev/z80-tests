@@ -18,60 +18,14 @@ A>LOAD Z80TYPE
 
 ### Example z80type Output
 
-#### Zilog Z80 - NMOS
+Please refer to [Results.md](Results.md) for the example output of z80type running on various CPUs.
 
-This is the output for most Z80 NMOS processors, including:
-* Zilog Z-80A CPU, date code 7935
-* Zilog Z8400APS, date code 8635
-* Zilog Z0840006PSC, date code 0415
-* SGS Z8400AB1, date code Y28427
-* Mostek MK3880N, date code 8448
-* NEC D780C, date code 8401XD
-* GS Z8400A PS, date code 8640
-* ST Z8400AB1, date code 28923
-* Sharp LH0080A, date code 048CB
-* GoldStar Z8400B PS, date code 9006
-* KR1858VM1, date codes 9305 and 9306
+Here is an example of running to on an original Zilog Z84C0010PEG CPUs:
 
 ```
-E>z80type
+A>Z80TYPE /D
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Processor family: Z80
-Logic family:     NMOS
-Manufacturer:     Zilog or non-MME/Thesys clone
-```
-#### MME UB880D
-
-This is the output for East German UB880 Z80 clones:
-* MME UB880D U 6
-* MME UB880D T 3
-* Thesys Z80H
-```
-E>z80type
-Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Processor family: U880
-Logic family:     NMOS
-Manufacturer:     MME or Thesys
-```
-#### Zilog Z84C00 - CMOS
-
-This is the output for Zilog Z84C00 and reportedly ST Z84C00 (to be verified)
-```
-E>z80type
-Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Processor family: Z80
-Logic family:     CMOS
-Manufacturer:     Zilog or SGS/ST
-```
-#### NEC and Toshiba CMOS Z80 clones
-
-This is the output for NEC and Toshiba Z80 CMOS clones:
-* NEC D70008AC-6, date code 8832LX703
-* Toshiba TMPZ84C00AP-8, date code 9544EFI
-```
-E>z80type
-Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Processor family: Z80
-Logic family:     CMOS
-Manufacturer:     Toshiba or NEC
+Raw results:       CMOS: 2C U880: 00 XF/YF: FF
+XF/YF flags test:  C000C000
+Detected CPU type: Zilog Z84C00
 ```
