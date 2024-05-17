@@ -95,7 +95,7 @@ Detected CPU type: NEC D780C, GoldStar Z8400, possibly KR1858VM1
  
 ```
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Raw results:       CMOS: 2C U880: 00 XF/YF: 1F 00011111
+Raw results:       CMOS: 2C U880: 00 XF/YF: 1F
 XF/YF flags test:  8CCEA317
 Detected CPU type: NEC D70008AC
 ```
@@ -104,7 +104,7 @@ Detected CPU type: NEC D70008AC
 
 ```
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Raw results:       CMOS: 2C U880: 00 XF/YF: 0D 00001101
+Raw results:       CMOS: 2C U880: 00 XF/YF: 0D
 XF/YF flags test:  80007B5A
 Detected CPU type: NEC D70008AC
 ```
@@ -113,7 +113,7 @@ Detected CPU type: NEC D70008AC
 
 ```
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Raw results:       CMOS: 2C U880: 00 XF/YF: 15 00010101
+Raw results:       CMOS: 2C U880: 00 XF/YF: 15
 XF/YF flags test:  6D767C31
 Detected CPU type: Unknown CMOS Z80 clone
 ```
