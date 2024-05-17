@@ -166,9 +166,23 @@ CHECKCMOS:
 	JZ	CMOSZ80
 	CPI	3FH		; does it never set YF when A.5=1?
 	JZ	TOSHIBA
-	ORI	033H		; try adding XF bits back
-	CPI	3FH		; does it never set YF when A.5=1?
-	JZ	NEC
+
+; test for NEC D70008AC. These CPUs seem to behave as following:
+; A.5=1 & F.5=0 => YF=1
+; A.3=1 & F.3=0 => XF is not set at all, or only sometimes is set
+; A.5=0 & F.5=1 => YF is sometimes set
+; A.3=0 & F.3=1 => XF is sometimes set
+; Note: All of 3 D70008AC that I have behave a bit differently here
+;       this might need to be updated when more tests are done
+	CPI	20H		; YF is often set when A.5=1?
+	JNC	CMOSUNKNOWN	; XYRESULT > 1Fh, not a NEC...
+	ANI	0FH		; F.5=1 & A.5=0 and F.3=1 & A.3=0 results
+	CPI	03H		; F.5=1 & A.5=0 never result in YF set?
+	JC	CMOSUNKNOWN
+	ANI	03H		; F.3=1 & A.3=0 results
+	JNZ	NEC
+
+CMOSUNKNOWN:	
 	LXI	D,MSGCMOSUNKNOWN
 	JMP	DONE
 	
@@ -600,7 +614,7 @@ MSGFLAGS	DB	'XF/YF flags test:  $'
 MSGRAWU880	DB	' U880: $'
 MSGRAWXY	DB	' XF/YF: $'
 MSGCPUTYPE	DB	'Detected CPU type: $'
-MSGU880NEW	DB	'Newer MME U880 or Thesys Z80$'
+MSGU880NEW	DB	'Newer MME U880, Thesys Z80, Microelectronica MMN 80CPU$'
 MSGU880OLD	DB	'Older MME U880$'
 MSGSHARPLH5080A	DB	'Sharp LH5080A$'
 MSGNMOSZ80	DB	'Zilog Z80, Zilog Z08400 or similar NMOS CPU',0DH,0AH

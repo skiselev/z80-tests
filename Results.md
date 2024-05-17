@@ -36,7 +36,7 @@ Mostek was the original Zilog licensed second source manufacturer for the Zilog 
 
 ### Mostek MK3800N
 
-* Mostek(C)8248; MK3880N; Z80-CPU; MALAYSIA; ; Back side: 3880 CM
+* Mostek(C)8248; MK3880N; Z80-CPU; MALAYSIA; Back side: 3880 CM
 * Mostek(C)8234; MK3880N-4; Z80 CPU; Back side: 3880N AU; MALAYSIA
 
 ```
@@ -95,7 +95,7 @@ Detected CPU type: NEC D780C, GoldStar Z8400, possibly KR1858VM1
  
 ```
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Raw results:       CMOS: 2C U880: 00 XF/YF: 1F
+Raw results:       CMOS: 2C U880: 00 XF/YF: 1F 00011111
 XF/YF flags test:  8CCEA317
 Detected CPU type: NEC D70008AC
 ```
@@ -104,9 +104,18 @@ Detected CPU type: NEC D70008AC
 
 ```
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
-Raw results:       CMOS: 2C U880: 00 XF/YF: 0D
+Raw results:       CMOS: 2C U880: 00 XF/YF: 0D 00001101
 XF/YF flags test:  80007B5A
 Detected CPU type: NEC D70008AC
+```
+
+* NEC D70008AC-6; JAPAN; 8648LX
+
+```
+Z80 Processor Type Detection (C) 2024 Sergey Kiselev
+Raw results:       CMOS: 2C U880: 00 XF/YF: 15 00010101
+XF/YF flags test:  6D767C31
+Detected CPU type: Unknown CMOS Z80 clone
 ```
 
 ## Toshiba
@@ -128,7 +137,7 @@ Detected CPU type: Toshiba TMPZ84C00AP, ST Z84C00AB
 
 ## Eastern Bloc
 
-### MME U880, Thesys Z80
+### MME U880, Thesys Z80, Microelectronica MMN 80CPU
 
 * Thesys Z80H; 399
 
@@ -136,7 +145,7 @@ Detected CPU type: Toshiba TMPZ84C00AP, ST Z84C00AB
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
 Raw results:       CMOS: 00 U880: 01 XF/YF: FF
 XF/YF flags test:  C000C000
-Detected CPU type: Newer MME U880 or Thesys Z80
+Detected CPU type: Newer MME U880, Thesys Z80, Microelectronica MMN 80CPU
 ```
 
 * MME UB880D; U 6
@@ -145,7 +154,7 @@ Detected CPU type: Newer MME U880 or Thesys Z80
 Z80 Processor Type Detection (C) 2024 Sergey Kiselev
 Raw results:       CMOS: 00 U880: 01 XF/YF: FF
 XF/YF flags test:  C000C000
-Detected CPU type: Newer MME U880 or Thesys Z80
+Detected CPU type: Newer MME U880, Thesys Z80, Microelectronica MMN 80CPU
 ```
 
 * MME UB880D; T 3
@@ -155,6 +164,15 @@ Z80 Processor Type Detection (C) 2024 Sergey Kiselev
 Raw results:       CMOS: 00 U880: 01 XF/YF: FD
 XF/YF flags test:  B2B28BF6
 Detected CPU type: Older MME U880
+```
+
+* Microelectronica MMN 80CPU - 9262
+
+```
+Z80 Processor Type Detection (C) 2024 Sergey Kiselev
+Raw results:       CMOS: 00 U880: 01 XF/YF: FF
+XF/YF flags test:  C000C000
+Detected CPU type: Newer MME U880, Thesys Z80, Microelectronica MMN 80CPU
 ```
 
 ### KR1858VM1
